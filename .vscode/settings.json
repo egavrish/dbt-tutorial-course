@@ -1,0 +1,17 @@
+{
+  // Associated the right file types with the right VSCode extensions
+  "files.associations": {
+    "*.sql": "jinja-sql"
+  },
+
+  // CRUCIAL - you need to change this to terminal.integrated.env.[osx|windows|linux] depending on your system
+  // and point it to the folder where your profiles directory is stored!
+  "terminal.integrated.env.osx": {
+    //"DBT_PROFILES_DIR": "~/.dbt",
+    "BIGQUERY_PROJECT": "dbt-udemy-443019"
+  },
+
+  // you get this by calling `where sqlfluff` after calling `pip install sqlfluff`
+  "sql.linter.executablePath": "/Library/Frameworks/Python.framework/Versions/3.12/bin/sqlfluff",
+  "sql.linter.run": "onType" // alternatively "onSave" if you'd like it less frequent
+}
